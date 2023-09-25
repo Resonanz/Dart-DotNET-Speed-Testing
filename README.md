@@ -23,7 +23,7 @@ Math exp and sin functions.
 - Result: 874,688 byte program.aot
 
 ### DotNET
-Go into DotNET directory and run: dotnet run. This will compile the .cs file and run the program.
+Go into DotNET directory and run: ```dotnet run```. This will compile the .cs file and run the program.
 
 ## Results
 
@@ -37,8 +37,8 @@ Result: 126607078.81100518. Calculation time:  0:00:04.545745
 
 ### C# DotNET
 
-<PublishAot>true</PublishAot>
+```<PublishAot>true</PublishAot>```
 Result: 126607078.81100518. Calculation time (ms): 3120
 
-<PublishAot>false</PublishAot>
+```<PublishAot>false</PublishAot>```
 Result: 126607078.81100518. Calculation time (ms): 3732
