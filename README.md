@@ -8,8 +8,8 @@ A simple speed test to compare Dart and C#.NET.
 Math exp and sin functions.
 
 ## Versions:
-Dart: Dart SDK version: 3.1.2 (stable) (Tue Sep 12 16:26:23 2023 +0000) on "windows_x64"
-DotNET: 8.0.100-rc.1.23455.8
+- Dart: Dart SDK version: 3.1.2 (stable) (Tue Sep 12 16:26:23 2023 +0000) on "windows_x64"
+- DotNET: 8.0.100-rc.1.23455.8
 
 ## To run:
 
