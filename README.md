@@ -17,10 +17,9 @@ Math exp and sin functions.
 #### For single .exe with embedded AoT compiler
 - Go into DotNET directory and run: ```dart compile exe bin/Program.dart```
 - Result: 4,763,136 byte program.exe
-- Program is a single .exe with embedded AoT compiler
 
 #### For single .aot that requires external AoT compiler to run
-- Go into DotNET directory and run: dart compile aot-snapshot bin/Program.dart
+- Go into DotNET directory and run: ```dart compile aot-snapshot bin/Program.dart```
 - Result: 874,688 byte program.aot
 
 ### DotNET
@@ -30,16 +29,16 @@ Go into DotNET directory and run: dotnet run. This will compile the .cs file and
 
 ### Run Dart program
 
-run: program.exe
+run: ```program.exe```
 Result: 126607078.81100518. Calculation time:  0:00:04.500831
 
-run: dartaotruntime bin/Program.aot
+run: ```dartaotruntime bin/Program.aot```
 Result: 126607078.81100518. Calculation time:  0:00:04.545745
 
 ### C# DotNET
 
-<PublishAot>true</PublishAot>
+**<PublishAot>true</PublishAot>**
 Result: 126607078.81100518. Calculation time (ms): 3120
 
-<PublishAot>false</PublishAot>
+**<PublishAot>false</PublishAot>**
 Result: 126607078.81100518. Calculation time (ms): 3732
