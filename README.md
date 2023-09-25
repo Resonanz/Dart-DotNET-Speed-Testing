@@ -14,14 +14,14 @@ Math exp and sin functions.
 ## To run:
 
 ### Compile Dart program 
+#### For single .exe with embedded AoT compiler
+- Go into DotNET directory and run: ```dart compile exe bin/Program.dart```
+- Result: 4,763,136 byte program.exe
+- Program is a single .exe with embedded AoT compiler
 
-#### (result is a single .exe with embedded AoT compiler)
-Go into DotNET directory and run: dart compile exe bin/Program.dart
-Result: 4,763,136 byte program.exe
-
-#### (result is a single .aot that requires external AoT compiler to run)
-Go into DotNET directory and run: dart compile aot-snapshot bin/Program.dart
-Result: 874,688 byte program.aot
+#### For single .aot that requires external AoT compiler to run
+- Go into DotNET directory and run: dart compile aot-snapshot bin/Program.dart
+- Result: 874,688 byte program.aot
 
 ### DotNET
 Go into DotNET directory and run: dotnet run. This will compile the .cs file and run the program.
