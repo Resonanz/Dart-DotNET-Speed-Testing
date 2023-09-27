@@ -2,25 +2,34 @@
 using static System.Math;
 
 Stopwatch stopwatch = Stopwatch.StartNew();
-
 double result = calc(100000000);
-
 Console.WriteLine("Result: " + result + ". Calculation time (ms): " + stopwatch.ElapsedMilliseconds);
 
-Point point1 = new Point(0,0);
-Point point2 = new Point(3,4);
-System.Console.WriteLine(point2.distanceTo(point1));
+stopwatch = Stopwatch.StartNew();
+calculatePoints(5000);
+Console.WriteLine("Result: " + result + ". Calculation time (ms): " + stopwatch.ElapsedMilliseconds);
 
-double calc(int upto)
+double calc(int iterations)
 {
     double result = 1;
 
-    for (int i = 0; i < upto; i++)
+    for (int i = 0; i < iterations; i++)
     {
         result += Exp( Sin((double)i / 360) );
     }
 
     return result;
+}
+
+
+void calculatePoints(int iterations)
+{
+  for (int i = 0; i < iterations; i++)
+    {
+      Point point1 = new Point(0,0);
+      Point point2 = new Point(3,4);
+      System.Console.WriteLine(point2.distanceTo(point1));
+    }
 }
 
 

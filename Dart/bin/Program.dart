@@ -3,25 +3,35 @@ import "dart:math";
 void main() {
   
   Stopwatch stopwatch = Stopwatch()..start();
-  
   double result = calc(100000000);
-
   print('Result: $result. Calculation time:  ${stopwatch.elapsed}');
 
-  Point point1 = Point(0,0);
-  Point point2 = Point(3,4);
-  print(point2.distanceTo(point1));
+  stopwatch = Stopwatch()..start();
+  calculatePoints(5000);
+  print('Result: $result. Calculation time:  ${stopwatch.elapsed}');
+
 }
 
 
-double calc(int upto) {
+double calc(int iterations) {
   double result = 1;
   
-  for (int i = 0; i < upto; i++) {
+  for (int i = 0; i < iterations; i++) {
     result += exp( sin(i/360) );
   }
 
   return result;
+}
+
+
+void calculatePoints(int iterations)
+{
+  for (int i = 0; i < iterations; i++)
+    {
+      Point point1 = Point(0,0);
+      Point point2 = Point(3,4);
+      print(point2.distanceTo(point1));
+    }
 }
 
 
