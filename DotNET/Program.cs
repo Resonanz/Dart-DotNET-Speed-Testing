@@ -7,6 +7,9 @@ double result = calc(100000000);
 
 Console.WriteLine("Result: " + result + ". Calculation time (ms): " + stopwatch.ElapsedMilliseconds);
 
+Point point1 = new Point(0,0);
+Point point2 = new Point(3,4);
+System.Console.WriteLine(point2.distanceTo(point1));
 
 double calc(int upto)
 {
@@ -14,8 +17,26 @@ double calc(int upto)
 
     for (int i = 0; i < upto; i++)
     {
-        result = result + Exp( Sin((double)i / 360) );
+        result += Exp( Sin((double)i / 360) );
     }
 
     return result;
+}
+
+
+class Point {
+  private double x;
+  private double y;
+
+  public Point(double x, double y)
+  {
+    this.x = x;
+    this.y = y;
+  }
+
+  public double distanceTo(Point other) {
+    var dx = x - other.x;
+    var dy = y - other.y;
+    return Sqrt(dx * dx + dy * dy);
+  }
 }
